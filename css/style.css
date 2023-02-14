@@ -20,11 +20,11 @@ body {
 /* Start Link */
 a {
   text-decoration: none;
-  color: var(--font-color2);
+  color: var();
   font-size: 17px;
 }
 a:hover {
-  color: var(--font-color4);
+  color: var();
 }
 
 .link {
@@ -37,35 +37,21 @@ a:hover {
 
 /* End Link */
 /* Start Text */
-p, h1, h2, h3, h4, h5, h6, a, button, .button-1, .button-2 {
-  text-transform: capitalize;
-}
-
-p {
-  font-size: 16px;
-  line-height: 28px;
-  margin-top: 18px;
-  letter-spacing: 1px;
-  color: var(--font-color3);
-  text-align: center;
+p, h2, h4, h5, h6, a, button {
+  text-transform: capitalize !important;
 }
 
 h1 {
-  text-align: center;
-  color: var(--font-color6);
+  color: var();
   margin-bottom: 15px;
   margin-top: 0;
 }
 
-h5 {
-  color: var(--font-color6);
-  margin-bottom: 15px;
-  font-size: x-large;
+h2 {
+  font-size: 44px;
 }
-
-h6 {
-  color: var(--font-color2);
-  margin-top: 5%;
+h2 span {
+  color: var(--color-blue);
 }
 
 /* End Text */
@@ -73,46 +59,24 @@ button, select {
   outline: none !important;
 }
 
-li {
+ul {
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+ul li {
   list-style: none;
 }
 
 a, button {
-  transition: 0.6s;
+  transition: 0.6s ease-in;
 }
 
-main {
-  margin: 5% 0;
+.big-img {
+  height: 300px;
 }
-main .item {
-  background-color: var(--bg-color2);
-  border: 3px solid var(--border-color2);
-  padding: 1rem;
-  border-radius: 25px;
-}
-main .item.item-small {
-  width: 60%;
-  position: relative;
-  left: 21%;
-}
-main .item section {
-  border: 2px solid var(--border-color2);
-  padding: 0;
-  border-radius: 25px;
-  background-color: var(--bg-color3);
-  margin: 1rem;
-  width: 97%;
-}
-main .item section img {
-  width: 100%;
-  height: 100%;
-}
-main .item section .text-main {
-  padding: 1rem;
-  height: 100%;
-}
-main .item section .text-main p {
-  line-height: 22px;
+
+section {
+  margin: 55px 0 100px 0;
 }
 
 .social-links {
@@ -139,25 +103,308 @@ main .item section .text-main p {
 }
 
 header {
-  padding: 30px 0;
+  padding: 30px 0 20px 0;
   border-bottom: 1px solid #635e5e;
 }
 header #toggleMenu {
+  width: 45px;
   font-size: 25px;
 }
 header .logo {
   font-size: 20px;
+  width: 131px;
 }
-header nav a {
-  transition: 0.6s ease-in;
+header #navBar {
+  display: none;
 }
-header nav a:hover, header nav a.active {
+header #navBar a:hover, header #navBar a.active {
   color: var(--color-blue) !important;
 }
+header #navBar a:hover::after, header #navBar a.active::after {
+  content: "";
+  border-bottom: 2px solid var(--color-blue);
+}
+header #navBar.active {
+  display: flex;
+}
 
-@media (max-width: 576px) {
+.intro .left-section {
+  position: relative;
+  height: 270px;
+}
+.intro .left-section .vector {
+  height: 157px;
+  margin-right: 15px;
+  width: 47px;
+}
+.intro .left-section .vector img {
+  width: 100%;
+  height: 100%;
+}
+.intro .left-section .info h1 {
+  font-size: 35px;
+}
+.intro .left-section .info h1 span {
+  color: var(--color-blue);
+}
+.intro .left-section .info .btns {
+  display: flex;
+  gap: 13px;
+}
+.intro .left-section .info .btns button {
+  font-size: 11px;
+  border-radius: 50px;
+  padding: 5px 15px;
+}
+.intro .left-section .info .btns button i {
+  margin-left: 3px;
+}
+.intro .left-section .info .btns button:first-child {
+  background-color: var(--color-blue);
+}
+.intro .left-section .info .btns button:last-child {
+  background-color: var(--color-gray);
+}
+.intro .left-section .down-icon {
+  position: absolute;
+  background-color: var(--color-gray);
+  padding: 13px;
+  width: 60px;
+  height: 55px;
+  text-align: center;
+  -webkit-animation: movedown 2s ease infinite;
+          animation: movedown 2s ease infinite;
+}
+.intro .left-section .down-icon img {
+  width: 14px;
+}
+
+.about-me .left-section {
+  background-image: url(../images/Group2378.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 450px;
+}
+.about-me .left-section .info {
+  margin-top: 55px;
+}
+.about-me .left-section .info p {
+  font-size: 11px;
+  line-height: 23px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  width: 325px;
+  color: var(--color-white);
+}
+
+.projects {
+  background-image: url(../images/Group23757.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+}
+.projects .items {
+  padding: 140px 0;
+}
+.projects .items .list-projects {
+  gap: 15px;
+}
+.projects .items .list-projects .active {
+  background-color: var(--color-blue);
+}
+.projects .items .list-projects li {
+  border-radius: 50px;
+  padding: 5px 20px;
+  background-color: var(--color-gray);
+}
+.projects .items .list-projects li a {
+  font-size: 12px;
+}
+.projects .items .items-projects ul {
+  position: relative;
+}
+.projects .items .items-projects ul li {
+  width: 255px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projects .items .items-projects ul li::after {
+  content: "";
+  position: absolute;
+  background-color: var(--color-gray);
+  background-size: 129px;
+  opacity: 0.5;
+  width: 224px;
+  height: 156px;
+}
+.projects .items .items-projects ul li img {
+  z-index: 1;
+}
+.projects .items .items-projects ul li:first-child img {
+  width: 160px;
+}
+.projects .items .items-projects ul li:nth-of-type(2) img, .projects .items .items-projects ul li:last-child img {
+  width: 190px;
+}
+.projects .items .items-projects ul li:nth-of-type(2) img {
+  margin-right: 19px;
+}
+
+.contact .right-section {
+  background-image: url(../images/Group2380.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.contact .right-section form label {
+  font-size: 13px;
+}
+.contact .right-section form input, .contact .right-section form textarea {
+  background-color: var(--color-gray);
+  border-radius: 15px;
+  border: none;
+  outline: none;
+}
+.contact .right-section form input::-moz-placeholder, .contact .right-section form textarea::-moz-placeholder {
+  color: #949494;
+  font-size: 14px;
+  text-transform: capitalize;
+  padding: 15px;
+}
+.contact .right-section form input:-ms-input-placeholder, .contact .right-section form textarea:-ms-input-placeholder {
+  color: #949494;
+  font-size: 14px;
+  text-transform: capitalize;
+  padding: 15px;
+}
+.contact .right-section form input::placeholder, .contact .right-section form textarea::placeholder {
+  color: #949494;
+  font-size: 14px;
+  text-transform: capitalize;
+  padding: 15px;
+}
+.contact .right-section form .input-items {
+  gap: 18px;
+}
+.contact .right-section form .input-items input {
+  width: 264px;
+  height: 35px;
+}
+.contact .right-section form textarea {
+  width: 100%;
+  height: 250px;
+  resize: none;
+}
+.contact .right-section form button {
+  font-size: 15px;
+  background-color: var(--color-blue);
+  text-shadow: 2px 3px 3px black;
+  height: 35px;
+  width: 160px;
+  border-radius: 20px;
+}
+.contact .right-section form button:focus {
+  outline: none;
+}
+.contact .right-section form button img {
+  width: 17px;
+}
+
+footer .info {
+  gap: 50px;
+}
+footer .info img {
+  width: 17px;
+}
+footer .info span {
+  margin-left: 5px;
+}
+footer .social-media {
+  gap: 30px;
+  margin-bottom: 75px !important;
+}
+footer .social-media li {
+  background-color: var(--color-gray);
+  padding: 8px;
+  border-radius: 20px;
+}
+footer .social-media li img {
+  width: 20px;
+}
+footer .privacy {
+  font-size: 12px;
+}
+
+@media (max-width: 767px) {
   header #navBar {
-    display: none !important;
+    position: fixed;
+    top: 13.5%;
+    left: 0;
+    width: 100%;
+    margin-left: auto;
+    justify-content: center;
+    background-color: var(--color-gray);
+    padding: 80px 0;
+  }
+  header ul {
+    text-align: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .intro .vector {
+    height: 145px;
+    line-height: 11;
+  }
+  .intro .info h1 {
+    font-size: 41px !important;
+  }
+}
+@media (min-width: 992px) {
+  .intro .vector {
+    height: 217px !important;
+    width: 55px !important;
+  }
+}
+@media (min-width: 768px) {
+  header #toggleMenu {
+    display: none;
+  }
+  header #navBar {
+    display: block !important;
+  }
+  .intro {
+    margin: 70px 0;
+  }
+  .intro .left-section {
+    height: 390px;
+  }
+  .intro .left-section .info h1 {
+    font-size: 50px;
+  }
+  .intro, .about-me {
+    margin-top: 100px;
+  }
+  .intro .items, .about-me .items {
+    flex-direction: unset !important;
+  }
+  .intro .items .right-section img, .about-me .items .right-section img {
+    height: 395px;
+  }
+  .projects .top-section {
+    align-items: flex-start !important;
+  }
+  .contact .left-section {
+    text-align: left !important;
+  }
+  footer .privacy {
+    text-align: end !important;
   }
 }
 /*
@@ -174,4 +421,20 @@ bootstrap 5 responsive screen sizes:
 * Extra-large, which is infixed by xl , is 1200px or larger. // Screens (Laptops)
 
 * Extra extra large, which is infixed by xxl , is 1400px or larger. // Screens (Larger Desktops And Monitors)
-*//*# sourceMappingURL=style.css.map */
+*/
+@-webkit-keyframes movedown {
+  from {
+    top: 80%;
+  }
+  to {
+    top: 90%;
+  }
+}
+@keyframes movedown {
+  from {
+    top: 80%;
+  }
+  to {
+    top: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */

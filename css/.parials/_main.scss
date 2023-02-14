@@ -1,24 +1,342 @@
 // Start Header
 header {
-    padding: 30px 0;
+    padding: 30px 0 20px 0;
     border-bottom: 1px solid #635e5e;
 
     #toggleMenu {
         // display: none;
+        width: 45px;
         font-size: 25px;
+        // text-align: end;
     }
 
     .logo {
         font-size: 20px;
+        width: 131px;
     }
 
-    nav {
-        a {
-            transition: .6s ease-in;
-    
+    #navBar {
+        display: none;
+
+        a {    
             &:hover, &.active {
                 color: var(--color-blue) !important;
+
+                &::after {
+                    content: "";
+                    border-bottom: 2px solid var(--color-blue);
+                }
+            }
+
+        }
+
+        &.active {
+            display: flex;
+        }
+    }
+}
+// End Header
+
+
+// Start Intro
+.intro {
+
+    
+    .left-section {
+        position: relative;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+        // align-items: center;
+        height: 270px;         
+
+        .vector {           
+            height: 157px;
+            margin-right: 15px;
+            width: 47px;
+            // line-height: 13;
+            // background-repeat: no-repeat;
+            // background-size: contain;
+            // background-image: url(../images/Icons/Vector187.svg);
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .info {
+            // position: absolute;  
+            // top: 43px;
+            // left: 90px;
+
+            h1 {
+                font-size: 35px;
+    
+                span {
+                    color: var(--color-blue);
+                }
+            }
+    
+            .btns {
+                display: flex;
+                gap: 13px;
+    
+                button {
+                    font-size: 11px;
+                    border-radius: 50px;
+                    padding: 5px 15px;
+
+                    i {
+                        margin-left: 3px;
+                    }
+                }
+    
+                button:first-child {
+                    background-color: var(--color-blue);
+                }
+    
+                button:last-child {
+                    background-color: var(--color-gray);
+                }
+            }
+        }
+
+        .down-icon {
+            position: absolute;
+            // bottom: 0;
+            // right: 90px;
+            background-color: var(--color-gray);
+            padding: 13px;
+            width: 60px;
+            height: 55px;
+            text-align: center;
+
+            animation: movedown 2s ease infinite;
+        
+            img {
+                width: 14px;  
             }
         }
     }
 }
+// End Intro
+
+
+
+// Start About Me
+.about-me {
+    .left-section {
+        background-image: url(../images/Group2378.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        height: 450px;
+
+        .info {
+            margin-top: 55px;
+
+            p {
+                font-size: 11px;
+                line-height: 23px;
+                margin-top: 10px;
+                letter-spacing: 1px;
+                font-weight: 300;
+                width: 325px;
+                color: var(--color-white);
+            }
+        }
+    }
+}
+// End About Me
+
+
+
+
+// Start Projects
+.projects {
+    background-image: url(../images/Group23757.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+
+    .items {
+        padding: 140px 0;
+
+
+        .list-projects {
+            gap: 15px;
+
+            .active {
+                background-color: var(--color-blue);
+            }
+
+            li {
+                border-radius: 50px;
+                padding: 5px 20px;
+                background-color: var(--color-gray);
+
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .items-projects {
+
+            ul {
+                position: relative;
+
+                li {
+                    width: 255px;
+                    height: 190px;               
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background-color: var(--color-gray);
+                        background-size: 129px;
+                        opacity: 0.5;
+                        width: 224px;
+                        height: 156px;
+                    }
+
+
+                    img {
+                        z-index: 1;
+                        
+                        
+                    }
+
+                    &:first-child {
+                        img {
+                            width: 160px;
+                        }
+                    }
+
+                    &:nth-of-type(2), &:last-child {
+                        img {
+                            width: 190px;
+                        }
+                    }
+
+                    &:nth-of-type(2) {
+                        img {
+                            margin-right: 19px;                        
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// End Projects
+
+
+
+
+// Start Contact
+.contact {
+    .right-section {
+        background-image: url(../images/Group2380.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+
+        form
+        {
+            label {
+                font-size: 13px;
+            }
+    
+            input, textarea {
+                background-color: var(--color-gray);
+                border-radius: 15px;
+                border: none;
+                outline: none;
+    
+                &::placeholder {
+                    color: #949494;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    padding: 15px;
+                }
+            }
+    
+            .input-items {
+                gap: 18px;
+    
+                input {
+                    width: 264px;
+                    height: 35px;
+                }
+            }
+    
+            textarea {            
+                width: 100%;
+                height: 250px;
+                resize: none;
+            }
+    
+            button {
+                font-size: 15px;
+                background-color: var(--color-blue);
+                text-shadow: 2px 3px 3px black;
+                height: 35px;
+                width: 160px;
+                border-radius: 20px;
+    
+                &:focus {
+                    outline: none;
+                }
+
+                img {
+                    width: 17px;
+                }
+            }
+        }
+    }
+
+}
+// End Contact
+
+
+
+// Start footer
+footer {
+    .info {
+        gap: 50px;
+
+        img {
+            width: 17px;
+        }
+
+        span {
+            margin-left: 5px;        
+        }
+    }
+
+    .social-media {
+        gap: 30px;
+        margin-bottom: 75px !important;
+
+        li {
+            background-color: var(--color-gray);
+            padding: 8px;
+            border-radius: 20px;
+
+            img {
+                width: 20px;
+            }
+        }
+    }
+
+    .privacy {
+        font-size: 12px;
+    }
+}
+// End footer

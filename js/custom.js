@@ -1,8 +1,7 @@
-// Start Menu bar 
-const toggleButton = document.querySelector('#toggleMenu');
-const navigation = document.querySelector('#navBar');
-
-toggleButton.addEventListener('click', () => {
-  navigation.style.display = navigation.style.display === 'block' ? 'none' : 'block';
-});
-// End Menu bar 
+function toggleMenu() {
+    const toggleMenu = document.querySelector('#toggleMenu'),
+        navBar = document.querySelector('#navBar');
+    
+    toggleMenu.classList.toggle("active");
+    navBar.classList.toggle("active");
+  };

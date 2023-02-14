@@ -1,8 +1,32 @@
 // Start Small Screens (Smaller Smartphones)
-@media (max-width: 576px) {
+@media (min-width: 200px) and (max-width: 480px)
+{
+
+}
+// End Small Screens (Smaller Smartphones)
+
+
+
+
+
+// Start Small Screens (Smaller Smartphones)
+@media (max-width: 767px) {
     header {
-        #navBar {
-            display: none !important;
+        #navBar {   
+            position: fixed;
+            top: 13.5%;
+            left: 0;
+            width: 100%;
+            margin-left: auto;
+            justify-content: center;
+            background-color: var(--color-gray);
+            padding: 80px 0;
+        }
+
+        ul {
+            text-align: center;
+            flex-direction: column;
+            gap: 30px;
         }
     }
 }
@@ -13,9 +37,96 @@
 
 
 // Start Small Screens (Smaller Smartphones)
-@media (min-width: 200px) and (max-width: 480px)
-{
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .intro {
+        .vector {           
+            height: 145px;
+            line-height: 11;                
+        }
 
+        .info {
+            h1 {
+                font-size: 41px !important;
+            }           
+        }
+    }
+}
+// End Small Screens (Smaller Smartphones)
+
+
+
+
+
+// Start Small Screens (Smaller Smartphones)
+@media (min-width: 992px) {
+    .intro {
+        .vector {           
+            height: 217px !important;
+            width: 55px !important;
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+    header {
+        #toggleMenu {
+            display: none;
+        }
+
+        #navBar {
+            display: block !important;
+        }
+    }
+
+    .intro {
+        margin: 70px 0;
+
+        .left-section {
+            height: 390px;     
+
+            .info {
+    
+                h1 {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+
+    .intro, .about-me {
+        margin-top: 100px;
+        
+        .items {
+            flex-direction: unset !important;
+                
+            .right-section {
+        
+                img {
+                    height: 395px;
+                }
+            }
+        }
+    }
+
+    .projects {
+        .top-section {       
+            align-items: flex-start !important;
+        }
+    }
+
+    .contact {
+        .left-section {       
+            text-align: left !important;
+        }
+    }
+
+    footer {
+        .privacy {
+            text-align: end !important;
+        }
+    }
 }
 // End Small Screens (Smaller Smartphones)
 
