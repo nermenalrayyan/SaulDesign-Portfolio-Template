@@ -170,7 +170,7 @@ header #navBar.active {
   background-color: var(--color-gray);
   padding: 13px;
   width: 60px;
-  height: 55px;
+  height: 50px;
   text-align: center;
   -webkit-animation: movedown 2s ease infinite;
           animation: movedown 2s ease infinite;
@@ -180,7 +180,7 @@ header #navBar.active {
 }
 
 .about-me .left-section {
-  background-image: url(../images/Group2378.svg);
+  background-image: url(../images/group2378.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -200,7 +200,7 @@ header #navBar.active {
 }
 
 .projects {
-  background-image: url(../images/Group23757.svg);
+  background-image: url(../images/group23757.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -256,7 +256,7 @@ header #navBar.active {
 }
 
 .contact .right-section {
-  background-image: url(../images/Group2380.svg);
+  background-image: url(../images/group2380.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
