@@ -134,6 +134,9 @@ header #navBar.active {
   display: flex;
 }
 
+.intro {
+  margin-top: 160px;
+}
 .intro .left-section {
   position: relative;
   height: 270px;
@@ -322,7 +325,7 @@ header #navBar.active {
 }
 
 footer .info {
-  gap: 50px;
+  gap: 30px 50px;
 }
 footer .info img {
   width: 17px;
@@ -349,7 +352,7 @@ footer .privacy {
 @media (max-width: 767px) {
   header #navBar {
     position: fixed;
-    top: 84px;
+    top: 82px;
     left: 0;
     width: 100%;
     margin-left: auto;
