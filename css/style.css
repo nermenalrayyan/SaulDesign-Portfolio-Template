@@ -103,6 +103,12 @@ section {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: var(--color-dark-blue);
   padding: 30px 0 20px 0;
   border-bottom: 1px solid #635e5e;
 }
