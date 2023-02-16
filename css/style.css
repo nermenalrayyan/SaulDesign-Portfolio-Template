@@ -30,7 +30,6 @@ body {
   padding: 0;
   line-height: 1.3;
   font-weight: bold !important;
-  text-transform: capitalize;
 }
 
 /* Start Link */
@@ -93,22 +92,6 @@ a, button {
 
 section .items {
   padding: 117px 0;
-}
-
-.social-links {
-  display: inline-flex;
-  margin-bottom: 0;
-}
-.social-links li {
-  margin-right: 1.5rem;
-  width: 30px;
-  transition: 0.3s ease;
-}
-.social-links li a {
-  font-size: 28px !important;
-}
-.social-links li a:hover {
-  font-size: 40px !important;
 }
 
 :root {
