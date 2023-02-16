@@ -1,7 +1,10 @@
 // Start Small Screens (Smaller Smartphones)
-@media (min-width: 200px) and (max-width: 480px)
+@media (max-width: 480px)
 {
-
+    @keyframes movedown {
+        from {top: 90%;}
+        to {top: 100%;}
+    }
 }
 // End Small Screens (Smaller Smartphones)
 
@@ -28,6 +31,10 @@
             flex-direction: column;
             gap: 30px;
         }
+    }
+
+    .intro {
+        margin-top: 125px !important;
     }
 }
 // End Small Screens (Smaller Smartphones)
@@ -61,6 +68,7 @@
 // Start Small Screens (Smaller Smartphones)
 @media (min-width: 992px) {
     .intro {
+        
         .vector {           
             height: 217px !important;
             width: 55px !important;
@@ -81,7 +89,9 @@
     }
 
     .intro {
-        margin: 70px 0;
+        // margin: 70px 0;
+        margin-top: 160px !important;
+
 
         .left-section {
             height: 390px;     
@@ -95,8 +105,8 @@
         }
     }
 
+
     .intro, .about-me {
-        margin-top: 100px;
         
         .items {
             flex-direction: unset !important;

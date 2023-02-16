@@ -1,3 +1,19 @@
+@-webkit-keyframes movedown {
+  from {
+    top: 80%;
+  }
+  to {
+    top: 90%;
+  }
+}
+@keyframes movedown {
+  from {
+    top: 80%;
+  }
+  to {
+    top: 90%;
+  }
+}
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -134,9 +150,6 @@ header #navBar.active {
   display: flex;
 }
 
-.intro {
-  margin-top: 160px;
-}
 .intro .left-section {
   position: relative;
   height: 270px;
@@ -157,7 +170,6 @@ header #navBar.active {
   color: var(--color-blue);
 }
 .intro .left-section .info .btns {
-  display: flex;
   gap: 13px;
 }
 .intro .left-section .info .btns button {
@@ -349,6 +361,24 @@ footer .privacy {
   font-size: 12px;
 }
 
+@media (max-width: 480px) {
+  @-webkit-keyframes movedown {
+    from {
+      top: 90%;
+    }
+    to {
+      top: 100%;
+    }
+  }
+  @keyframes movedown {
+    from {
+      top: 90%;
+    }
+    to {
+      top: 100%;
+    }
+  }
+}
 @media (max-width: 767px) {
   header #navBar {
     position: fixed;
@@ -364,6 +394,9 @@ footer .privacy {
     text-align: center;
     flex-direction: column;
     gap: 30px;
+  }
+  .intro {
+    margin-top: 125px !important;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -389,16 +422,13 @@ footer .privacy {
     display: block !important;
   }
   .intro {
-    margin: 70px 0;
+    margin-top: 160px !important;
   }
   .intro .left-section {
     height: 390px;
   }
   .intro .left-section .info h1 {
     font-size: 50px;
-  }
-  .intro, .about-me {
-    margin-top: 100px;
   }
   .intro .items, .about-me .items {
     flex-direction: unset !important;
@@ -430,20 +460,4 @@ bootstrap 5 responsive screen sizes:
 * Extra-large, which is infixed by xl , is 1200px or larger. // Screens (Laptops)
 
 * Extra extra large, which is infixed by xxl , is 1400px or larger. // Screens (Larger Desktops And Monitors)
-*/
-@-webkit-keyframes movedown {
-  from {
-    top: 80%;
-  }
-  to {
-    top: 90%;
-  }
-}
-@keyframes movedown {
-  from {
-    top: 80%;
-  }
-  to {
-    top: 90%;
-  }
-}/*# sourceMappingURL=style.css.map */
+*//*# sourceMappingURL=style.css.map */
