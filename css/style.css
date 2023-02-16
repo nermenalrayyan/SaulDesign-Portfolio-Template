@@ -131,6 +131,11 @@ header {
 header #toggleMenu {
   width: 45px;
   font-size: 25px;
+  color: var(--color-white);
+  transition: all 0.6s linear;
+}
+header #toggleMenu:hover, header #toggleMenu.active {
+  color: var(--color-blue);
 }
 header .logo {
   font-size: 20px;
@@ -176,15 +181,24 @@ header #navBar.active {
   font-size: 11px;
   border-radius: 50px;
   padding: 5px 15px;
+  border: none;
+  transition: all 0.6s linear;
 }
 .intro .left-section .info .btns button i {
   margin-left: 3px;
 }
-.intro .left-section .info .btns button:first-child {
+.intro .left-section .info .btns .btn-primary {
   background-color: var(--color-blue);
 }
-.intro .left-section .info .btns button:last-child {
+.intro .left-section .info .btns .btn-primary:hover {
   background-color: var(--color-gray);
+}
+.intro .left-section .info .btns .btn-secondary {
+  background-color: var(--color-gray);
+}
+.intro .left-section .info .btns .btn-secondary:hover {
+  color: var(--color-blue);
+  background-color: var(--color-white);
 }
 .intro .left-section .down-icon {
   position: absolute;
@@ -218,6 +232,13 @@ header #navBar.active {
   font-weight: 300;
   width: 290px;
   color: var(--color-white);
+  transition: all 0.6s ease;
+}
+.about-me .left-section .info p .read-more {
+  color: var(--color-white);
+}
+.about-me .left-section .info p .read-more:hover {
+  color: var(--color-blue);
 }
 
 .projects {
@@ -240,6 +261,10 @@ header #navBar.active {
   border-radius: 50px;
   padding: 5px 20px;
   background-color: var(--color-gray);
+  transition: all 0.6s linear;
+}
+.projects .items .list-projects li:hover {
+  background-color: var(--color-blue);
 }
 .projects .items .list-projects li a {
   font-size: 12px;
@@ -290,24 +315,22 @@ header #navBar.active {
   border-radius: 15px;
   border: none;
   outline: none;
+  color: var(--color-white);
 }
 .contact .right-section form input::-moz-placeholder, .contact .right-section form textarea::-moz-placeholder {
   color: #949494;
   font-size: 14px;
   text-transform: capitalize;
-  padding: 15px;
 }
 .contact .right-section form input:-ms-input-placeholder, .contact .right-section form textarea:-ms-input-placeholder {
   color: #949494;
   font-size: 14px;
   text-transform: capitalize;
-  padding: 15px;
 }
 .contact .right-section form input::placeholder, .contact .right-section form textarea::placeholder {
   color: #949494;
   font-size: 14px;
   text-transform: capitalize;
-  padding: 15px;
 }
 .contact .right-section form .input-items {
   gap: 18px;
@@ -315,11 +338,13 @@ header #navBar.active {
 .contact .right-section form .input-items input {
   width: 264px;
   height: 35px;
+  padding-left: 20px;
 }
 .contact .right-section form textarea {
   width: 100%;
   height: 250px;
   resize: none;
+  padding: 20px;
 }
 .contact .right-section form button {
   font-size: 15px;
@@ -328,6 +353,10 @@ header #navBar.active {
   height: 35px;
   width: 160px;
   border-radius: 20px;
+  transition: all 0.6s linear;
+}
+.contact .right-section form button:hover {
+  background-color: var(--color-gray);
 }
 .contact .right-section form button:focus {
   outline: none;
@@ -338,6 +367,13 @@ header #navBar.active {
 
 footer .info {
   gap: 30px 50px;
+}
+footer .info a {
+  transition: 0.6s ease;
+  color: var(--color-white) !important;
+}
+footer .info a:hover {
+  color: var(--color-blue) !important;
 }
 footer .info img {
   width: 17px;
@@ -353,6 +389,10 @@ footer .social-media li {
   background-color: var(--color-gray);
   padding: 8px;
   border-radius: 20px;
+  transition: all 0.6s linear;
+}
+footer .social-media li:hover {
+  background-color: var(--color-dark-blue);
 }
 footer .social-media li img {
   width: 20px;
@@ -445,19 +485,4 @@ footer .privacy {
   footer .privacy {
     text-align: end !important;
   }
-}
-/*
-bootstrap 5 responsive screen sizes:
-
-* They include x-small which is between 0 and 576px.
-
-* Small, which has the sm class infix is 576px or larger. // Screens (Smaller Smartphones)
-
-* Medium, which has the md class infix is 768px or larger. // Screens (Tablets And Larger Smartphones)
-
-* Large, which has the lg class infix is 992px or larger.
-
-* Extra-large, which is infixed by xl , is 1200px or larger. // Screens (Laptops)
-
-* Extra extra large, which is infixed by xxl , is 1400px or larger. // Screens (Larger Desktops And Monitors)
-*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

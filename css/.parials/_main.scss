@@ -10,10 +10,14 @@ header {
     border-bottom: 1px solid #635e5e;
 
     #toggleMenu {
-        // display: none;
         width: 45px;
         font-size: 25px;
-        // text-align: end;
+        color: var(--color-white);
+        transition: all .6s linear;
+
+        &:hover,  &.active{
+            color: var(--color-blue);
+        }
     }
 
     .logo {
@@ -90,18 +94,30 @@ header {
                     font-size: 11px;
                     border-radius: 50px;
                     padding: 5px 15px;
+                    border: none;
+                    transition: all .6s linear;
+
 
                     i {
                         margin-left: 3px;
                     }
                 }
     
-                button:first-child {
+                .btn-primary {
                     background-color: var(--color-blue);
+
+                    &:hover {
+                        background-color: var(--color-gray);
+                    }
                 }
     
-                button:last-child {
+                .btn-secondary {
                     background-color: var(--color-gray);
+
+                    &:hover {
+                        color: var(--color-blue);
+                        background-color: var(--color-white);
+                    }
                 }
             }
         }
@@ -115,7 +131,6 @@ header {
             width: 60px;
             height: 50px;
             text-align: center;
-
             animation: movedown 2s ease infinite;
         
             img {
@@ -148,6 +163,15 @@ header {
                 font-weight: 300;
                 width: 290px;
                 color: var(--color-white);
+                transition: all .6s ease;
+
+                .read-more {
+                    color: var(--color-white);
+
+                    &:hover {
+                        color: var(--color-blue);
+                    }
+                }
             }
         }
     }
@@ -180,6 +204,11 @@ header {
                 border-radius: 50px;
                 padding: 5px 20px;
                 background-color: var(--color-gray);
+                transition: all .6s linear;
+
+                &:hover {
+                    background-color: var(--color-blue);
+                }
 
                 a {
                     font-size: 12px;
@@ -262,12 +291,13 @@ header {
                 border-radius: 15px;
                 border: none;
                 outline: none;
+                color: var(--color-white);
     
                 &::placeholder {
                     color: #949494;
                     font-size: 14px;
                     text-transform: capitalize;
-                    padding: 15px;
+                    // padding: 15px;
                 }
             }
     
@@ -277,6 +307,7 @@ header {
                 input {
                     width: 264px;
                     height: 35px;
+                    padding-left: 20px;
                 }
             }
     
@@ -284,6 +315,7 @@ header {
                 width: 100%;
                 height: 250px;
                 resize: none;
+                padding: 20px;
             }
     
             button {
@@ -293,6 +325,11 @@ header {
                 height: 35px;
                 width: 160px;
                 border-radius: 20px;
+                transition: all .6s linear;
+
+                &:hover {
+                    background-color: var(--color-gray);
+                }
     
                 &:focus {
                     outline: none;
@@ -315,12 +352,21 @@ footer {
     .info {
         gap: 30px 50px;
 
+        a {
+            transition: .6s ease;
+            color: var(--color-white) !important;
+    
+            &:hover {
+                color: var(--color-blue) !important;
+            }
+        }
+        
         img {
             width: 17px;
         }
 
         span {
-            margin-left: 5px;        
+            margin-left: 5px;
         }
     }
 
@@ -332,6 +378,11 @@ footer {
             background-color: var(--color-gray);
             padding: 8px;
             border-radius: 20px;
+            transition: all .6s linear;
+
+            &:hover {
+                background-color: var(--color-dark-blue);
+            }
 
             img {
                 width: 20px;
