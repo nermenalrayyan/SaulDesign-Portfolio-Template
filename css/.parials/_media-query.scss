@@ -68,9 +68,24 @@
 @media (min-width: 992px) {
     .intro {
         
-        .vector {           
-            height: 217px !important;
-            width: 55px !important;
+        .left-section {
+            // align-items: flex-start !important;
+
+            .top-section {
+                justify-content: flex-start;
+                width: 100%;
+
+                .vector {           
+                    height: 217px !important;
+                    width: 55px !important;
+                }
+            }     
+        }
+    }
+
+    .about-me {
+        .left-section {
+            justify-content: left !important;
         }
     }
 }
@@ -101,6 +116,10 @@
                     font-size: 50px;
                 }
             }
+
+            // .down-icon {
+            //     right: 240px !important;
+            // }
         }
     }
 

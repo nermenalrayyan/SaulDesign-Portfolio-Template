@@ -140,6 +140,7 @@ header #navBar.active {
 
 .intro .left-section {
   position: relative;
+  align-items: center;
   height: 270px;
 }
 .intro .left-section .vector {
@@ -203,6 +204,7 @@ header #navBar.active {
   background-size: contain;
   background-position: center center;
   height: 450px;
+  justify-content: center;
 }
 .about-me .left-section .info {
   margin-top: 55px;
@@ -432,9 +434,16 @@ footer .privacy {
   }
 }
 @media (min-width: 992px) {
-  .intro .vector {
+  .intro .left-section .top-section {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .intro .left-section .top-section .vector {
     height: 217px !important;
     width: 55px !important;
+  }
+  .about-me .left-section {
+    justify-content: left !important;
   }
 }
 @media (min-width: 768px) {

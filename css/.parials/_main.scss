@@ -53,10 +53,7 @@ header {
     
     .left-section {
         position: relative;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-between;
-        // align-items: center;
+        align-items: center;
         height: 270px;         
 
         .vector {           
@@ -124,6 +121,7 @@ header {
 
         .down-icon {
             position: absolute;
+            // right: 210px;
             // bottom: 0;
             // right: 90px;
             background-color: var(--color-gray);
@@ -151,6 +149,8 @@ header {
         background-size: contain;
         background-position: center center;
         height: 450px;
+        justify-content: center;
+
 
         .info {
             margin-top: 55px;
