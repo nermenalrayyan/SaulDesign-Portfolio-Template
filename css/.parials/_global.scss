@@ -101,11 +101,12 @@ a, button
 }
 
 section {
-    margin: 55px 0 100px 0;
+    // margin: 55px 0 100px 0;
+    // padding-top: 95px;
 
-    // .items {
-    //     // flex-direction: column-reverse;
-    // }
+    .items {
+        padding: 117px 0;
+    }
 }
 
 .social-links
