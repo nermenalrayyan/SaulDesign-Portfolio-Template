@@ -204,7 +204,6 @@ header #navBar.active {
   background-size: contain;
   background-position: center center;
   height: 450px;
-  justify-content: center;
 }
 .about-me .left-section .info {
   margin-top: 55px;
@@ -422,6 +421,9 @@ footer .privacy {
   }
   .intro {
     margin-top: 125px !important;
+  }
+  .about-me .left-section {
+    justify-content: center !important;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
