@@ -285,6 +285,9 @@ header #navBar.active {
   margin-right: 19px;
 }
 
+.contact .left-section {
+  align-items: center;
+}
 .contact .right-section {
   background-image: url(../images/group2380.svg);
   background-repeat: no-repeat;
@@ -474,7 +477,7 @@ footer .privacy {
     align-items: flex-start !important;
   }
   .contact .left-section {
-    text-align: left !important;
+    align-items: flex-start !important;
   }
   footer .privacy {
     text-align: end !important;
